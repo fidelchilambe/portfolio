@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Fidel Chilambe — Experience</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Space+Grotesk:wght@400;600;700&display=swap" rel="stylesheet">
+  <style>
+    body{margin:0; font-family:Inter, sans-serif; background:#0b0b14; color:#fff}
+    nav{display:flex; justify-content:center; gap:20px; background:#111; padding:14px; position:sticky; top:0}
+    nav a{color:#bbb; text-decoration:none; padding:6px 12px; border-radius:8px; transition:.3s}
+    nav a:hover, nav a.active{color:#fff; background:#222}
+    .page{max-width:900px; margin:0 auto; padding:60px 20px; min-height:70vh}
+    h1{font-family:'Space Grotesk', sans-serif; font-size:2.4rem; margin-bottom:20px}
+    .timeline{position:relative; margin-top:30px}
+    .timeline::before{content:''; position:absolute; left:10px; top:0; bottom:0; width:2px; background:linear-gradient(180deg, rgba(255,255,255,.35), rgba(255,255,255,0))}
+    .titem{position:relative; padding-left:32px; margin:16px 0}
+    .titem::before{content:''; position:absolute; left:4px; top:8px; width:12px; height:12px; border-radius:50%; background:linear-gradient(135deg, #7c5cff, #51ffe7); box-shadow:0 4px 18px rgba(124,92,255,.6)}
+    .titem h4{margin:0 0 4px}
+    .titem small{color:#aaa}
+    .titem p{color:#ccc}
+    footer{text-align:center; padding:30px; color:#777; background:#111}
+  </style>
+</head>
+<body>
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="projects.html">Projects</a>
+    <a href="skills.html">Skills</a>
+    <a href="experience.html">Experience</a>
+    <a href="contact.html">Contact</a>
+  </nav>
+
+  <div class="page">
+    <h1>Experience</h1>
+    <div class="timeline">
+      <div class="titem">
+        <h4>Web Developer · Freelance</h4>
+        <small>2024 — Present (1 year)</small>
+        <p>Shipped high-quality, responsive websites with advanced motion and clean design. Focused on performance, accessibility, and security-aware development.</p>
+      </div>
+      <div class="titem">
+        <h4>Ethical Hacking Practice</h4>
+        <small>Ongoing</small>
+        <p>CTFs and lab environments to strengthen security skills. Reconnaissance, enumeration, and remediation aligned to best practices.</p>
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    © <span id="year"></span> Fidel Chilambe. All rights reserved.
+  </footer>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+    const links=document.querySelectorAll('nav a');
+    links.forEach(l=>{if(window.location.href.includes(l.getAttribute('href'))){l.classList.add('active');}});
+  </script>
+</body>
+</html>

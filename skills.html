@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Fidel Chilambe — Skills</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Space+Grotesk:wght@400;600;700&display=swap" rel="stylesheet">
+  <style>
+    body{margin:0; font-family:Inter, sans-serif; background:#0b0b14; color:#fff}
+    nav{display:flex; justify-content:center; gap:20px; background:#111; padding:14px; position:sticky; top:0}
+    nav a{color:#bbb; text-decoration:none; padding:6px 12px; border-radius:8px; transition:.3s}
+    nav a:hover, nav a.active{color:#fff; background:#222}
+    .page{max-width:900px; margin:0 auto; padding:60px 20px; min-height:70vh}
+    h1{font-family:'Space Grotesk', sans-serif; font-size:2.4rem; margin-bottom:20px}
+    .skills{display:grid; grid-template-columns:repeat(auto-fit,minmax(220px,1fr)); gap:20px; margin-top:30px}
+    .card{background:#111; border-radius:14px; padding:20px; border:1px solid #333; transition:.3s}
+    .card:hover{transform:translateY(-4px); background:#151515}
+    .card h2{font-size:1.3rem; margin:0 0 12px}
+    .chips{display:flex; flex-wrap:wrap; gap:8px}
+    .chip{padding:6px 10px; border-radius:20px; font-size:.85rem; background:#1d1d1d; border:1px solid #333; color:#aaa}
+    footer{text-align:center; padding:30px; color:#777; background:#111}
+  </style>
+</head>
+<body>
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="projects.html">Projects</a>
+    <a href="skills.html">Skills</a>
+    <a href="experience.html">Experience</a>
+    <a href="contact.html">Contact</a>
+  </nav>
+
+  <div class="page">
+    <h1>Skills</h1>
+    <div class="skills">
+      <div class="card">
+        <h2>Frontend</h2>
+        <div class="chips">
+          <span class="chip">HTML5</span>
+          <span class="chip">CSS3 / SCSS</span>
+          <span class="chip">JavaScript (ES6+)</span>
+          <span class="chip">Responsive UI</span>
+          <span class="chip">Animations</span>
+          <span class="chip">Accessibility</span>
+        </div>
+      </div>
+      <div class="card">
+        <h2>Mobile & UI</h2>
+        <div class="chips">
+          <span class="chip">Flutter</span>
+          <span class="chip">Figma</span>
+          <span class="chip">Design Systems</span>
+        </div>
+      </div>
+      <div class="card">
+        <h2>Security</h2>
+        <div class="chips">
+          <span class="chip">Kali Linux</span>
+          <span class="chip">Nmap</span>
+          <span class="chip">Burp Suite</span>
+          <span class="chip">Metasploit</span>
+          <span class="chip">OWASP Top 10</span>
+        </div>
+      </div>
+      <div class="card">
+        <h2>Workflow</h2>
+        <div class="chips">
+          <span class="chip">Git / GitHub</span>
+          <span class="chip">Netlify</span>
+          <span class="chip">Vite / Node basics</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    © <span id="year"></span> Fidel Chilambe. All rights reserved.
+  </footer>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+    const links=document.querySelectorAll('nav a');
+    links.forEach(l=>{
+      if(window.location.href.includes(l.getAttribute('href'))){
+        l.classList.add('active');
+      }
+    });
+  </script>
+</body>
+</html>
